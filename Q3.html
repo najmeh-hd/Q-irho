@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>QUESTION 3</h2>
+        <p><b>return:</b></p>
+        <p id="Q3"></p>
+
+        <script>
+            const arr1 = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+
+            function findMostFrequent(array) {
+                const countMap = new Map();
+                let mostFrequent = array[0];
+                let maxCount = 0;
+
+                for (let i = 0; i < array.length; i++) {
+                    const num = array[i];
+                    const count = (countMap.get(num) || 0) + 1;
+                    countMap.set(num, count);
+
+                    if (count > maxCount) {
+                        mostFrequent = num;
+                        maxCount = count;
+                    }
+
+                }
+
+                document.getElementById("Q3").innerHTML = mostFrequent;
+            }
+            findMostFrequent(arr1);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body style="text-align: center;">
+        <h2>QUESTION 1</h2>
+        <P><b>return:</b></P>
+        <p id="Q1"></p>
+
+        <script>
+            const groceries = [{item: "Carrots"}, {item: "Potato"}, {item: "Tomato"}, {item: "Onion"}, {item: "Cabbage"}, {item: "Baken"}]
+
+            function concatArray(array) {
+                let text = "";                
+                
+                for (let x in array) {
+                    if (Number(x) < array.length - 1) {
+                        text += array[x].item + ", ";
+                    }
+
+                    else {
+                    text += " and "+ array[x].item;
+                    }
+                }
+                
+                document.getElementById("Q1").innerHTML = text;
+            }
+            concatArray(groceries)
+        </script>
+    </body>
+</html>

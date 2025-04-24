@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>QUESTION 4</h2>
+        <p><b>return:</b></p>
+        <p id="Q4"></p>
+
+        <script>
+            const arr1 = [[[0], [1]], [[2], [3]], [[4], [5]]];
+
+            function flatten(ary) {
+                let flatted = [];
+                for(let i = 0; i < ary.length; i++) {
+                    if(Array.isArray(ary[i])) {
+                        flatted = flatted.concat(flatten(ary[i]));
+                    }
+                    else {
+                        flatted.push(ary[i]);
+                    }
+                }
+                return flatted;
+            }
+            const result = flatten(arr1);
+            document. getElementById("Q4").innerHTML = result.join(", ");
+
+        </script>
+    </body>
+</html>

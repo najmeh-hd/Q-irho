@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>QUESTION 7</h2>
+        <p><b>return:</b></p>
+        <p id="Q7"></p>
+
+        <script>
+            const arr1 = [1, 2 , 3];
+            const arr2 = [100, 2, 1, 10];
+            let union = [...new Set([...arr1, ...arr2])];
+            union.sort(function(a, b){return a - b})
+            document.getElementById("Q7").innerHTML = union;
+        </script>
+    </body>
+</html>
