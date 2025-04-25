@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>QUESTION 9</h2>
+    <p><b>return:</b></p>
+    <p id="Q9"></p>
+    <script>
+      const forDeletion = [5];
+      let arr = [2, 5, 9, 6];
+      arr = arr.filter(item => !forDeletion.includes(item));
+      document.getElementById("Q9").innerHTML = arr;
+    </script>
+  </body>
+</html>
